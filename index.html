@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tip Calculator</title>
+<style>
+*{
+			margin:0px;
+			padding:0px;	
+				}
+body{
+				background-color:rgba(30,40,9,0.4);
+			 }
+#main{
+				border:2px solid black;
+				margin:40px;
+				margin-top:10px;
+				height:auto;
+				background-color: white;
+				border-radius:10% 10% 10% 10%;
+				overflow: hidden;
+				box-shadow: 0 10px 10px 0 rgba(50, 0, 0, 0.3), 0 7px 21px 0 rgba(50, 0, 0, 0.50);
+				}							 
+#heading{
+				background-color:green;
+				border-bottom:2px solid red;
+				text-align: center;
+				border-radius:10% 10% 0% 0%;
+				padding:5px;
+				color: white;
+				}			 
+#content{
+				margin-left:20px;
+				margin-top:10px;
+				margin-right:30px;
+				}
+p{
+				margin-top:5px;
+				margin-bottom:10px;
+				font-size:12px;
+				}
+span{
+				font-size:13px;
+				}				
+
+#amount,#tip{
+				border-top:2px solid rgba(99,99,99,0.4);
+				border-left:2px solid rgba(99,99,99,0.4);
+				padding:3px;
+				}
+#tip{
+				background-color	: white;
+				padding:4px;
+				}
+#button{
+				background-color	: orange;
+				border:2px solid blue;
+				padding:5px;
+				float:right;				
+				}
+#display{
+				float:left;
+				font-size:11px;
+				}
+#dd{
+				float:right;
+				font-size:11px;
+				color:red;
+				}				
+	#mg{
+					float:left;
+					font-size:11px;
+					}
+#fn{
+				margin-top:5px;
+				margin-left:130px;
+				padding:4px;
+				border-radius:10%;
+				background-color:black;
+				color: white;
+				}			
+	a{
+						color: white;
+						font-weight:700;
+						margin-left:130px;
+					}				
+									
+</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="body">
+<button onclick="fnc()" id="fn">Dark Theam</button><br>
+<a href="https://www.instagram.com/immortal_freak45/">Contact me</a>
+<div id="main">
+<div id="heading">Money Converter</div>
+
+<div id="content">
+<p>Choose Foreign Country</p>
+<select id="tip" >
+<option value="0">--Choose an Country--</option>
+<option value="76.23">US</option>
+<option value="0.46">PAKISTAN</option>
+<option value="0.90">BANGLADESH</option>
+<option value="0.62">NEPAL</option>
+<option value="0.41">SRI LAKA</option>
+<option value="10.77">CHINA</option>
+<option value="0.90">AFGHANISTAN</option>
+<option value="0.55">BURMAKAYAT</option>
+<option value="2.46">THAILAND</option>
+<option value="1.0">BHUTAN</option>
+<option value="0.0033">VEITNAM</option>
+<option value="17.83">MALASYA</option>
+</select>
+
+<p>Choose Foreign Amount</p>
+<span>Rs.</span><input id="amount" type="number"><br><br>
+
+<button id="button" onclick="main()">Convert</button>
+<br><br>
+<hr>
+<div id="display"></div>
+<span id="dd"></span><br><br><br>
+<div id="mg"></div><br><br>
+</div>
+</div>
+<script>
+function main(){
+var a=document.getElementById("amount"). value;
+var
+b=document.getElementById("tip"). value;
+if(a==0)
+{
+				alert("Enter Foreign Rupees");
+				}
+	else if(b==0)			
+	{
+						alert("Enter Country");
+					}
+else{
+				var d=(a*b);
+document.getElementById("display").innerHTML="Total Money<br>₹"+d;
+document.getElementById("dd").innerHTML="Please Visit Again<br>Developer-Aman Singh<br>Responser-Ankit Jha";
+document.getElementById("mg").innerHTML="NOTE: Total Foreign Amount From selected country Rs."+a+" is ₹"+d+" Indian Rupees<br><br>" ;
+}
+}
+function fnc(){
+		document.getElementById("body"). style.backgroundColor="black";
+				}
+</script>
+</body>
+</html>
